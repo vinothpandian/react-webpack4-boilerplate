@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-boilerplate",
+  "name": "react-boilerplate",
   "version": "1.0.0",
-  "description": "React Redux Webpack 4 boilerplate",
+  "description": "React Webpack 4 boilerplate",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config ./config/webpack.prod.js",
@@ -12,6 +12,7 @@
   "dependencies": {
     "babel-plugin-emotion": "^9.1.2",
     "emotion": "^9.1.2",
+    "lodash": "^4.17.10",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
