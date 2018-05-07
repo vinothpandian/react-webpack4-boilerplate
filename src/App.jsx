@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
+import { Spring } from 'react-spring';
 import './styles.scss';
 
 const sunGlasses = require('./Sunglasses-512.png');
@@ -17,9 +18,19 @@ const Title = styled('h1')`
   font-weight: 500;
 `;
 
+const AnimatedTitle = props => (
+  <Spring
+    from={{ fontSize: '1rem', opacity: 0 }}
+    to={{ fontSize: '7rem', opacity: 1 }}
+    config={{ tension: 200, friction: 8 }}
+  >
+    {styles => <Title style={styles}>{props.children}</Title>}
+  </Spring>
+);
+
 const App = () => (
   <CenterContainer column>
-    <Title>Oh!!! This works!</Title>
+    <AnimatedTitle>Oh!!! This works!</AnimatedTitle>
     <img src={sunGlasses} alt="Sun Glasses" />
   </CenterContainer>
 );
