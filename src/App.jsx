@@ -1,9 +1,9 @@
 import React from 'react';
-import styled from 'react-emotion';
-import { Spring } from 'react-spring';
+import styled from '@emotion/styled';
+import { Spring, animated } from '@react-spring/web';
 import './styles.scss';
 
-const sunGlasses = require('./Sunglasses-512.png');
+import sunGlasses from './Sunglasses-512.png';
 
 const CenterContainer = styled('div')(props => ({
   height: '100%',
@@ -18,13 +18,15 @@ const Title = styled('h1')`
   font-weight: 500;
 `;
 
+const SpringTitle = animated(Title);
+
 const AnimatedTitle = props => (
   <Spring
     from={{ fontSize: '1rem', opacity: 0 }}
     to={{ fontSize: '7rem', opacity: 1 }}
     config={{ tension: 200, friction: 8 }}
   >
-    {styles => <Title style={styles}>{props.children}</Title>}
+    {styles => <SpringTitle style={styles}>{props.children}</SpringTitle>}
   </Spring>
 );
 

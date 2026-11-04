@@ -1,57 +1,12 @@
-# React boilerplate with Webpack4
+# React animation starter
 
-#### React Webpack 4 boilerplate with react-emotion, react-spring and SASS for Single Page Applications
+This former Webpack 4 starter now uses Vite and Dart Sass with React 16, Emotion 11, and React Spring's web package. The lazy-loaded screen retains its loading spinner, spring-animated title, illustration, and yellow background. React's built-in lazy/Suspense replaces react-loadable.
 
-## List of packages
+Requires Node.js 22.12+ and a modern ES2020 browser.
 
-* [react](https://reactjs.org/)
-* [emotion](https://emotion.sh/)
-* [react-spring](http://react-spring.surge.sh/)
-* [react-loadable](https://github.com/jamiebuilds/react-loadable)
-* [lodash](https://lodash.com/)
+- `npm ci` (or Yarn 1 `yarn install --frozen-lockfile`): install dependencies.
+- `npm start`: run the development server at http://localhost:8080.
+- `npm run build`: create the production site in `dist/`.
+- `npm test`: check the headline and illustration.
 
-## Getting Started
-
-To get started, first install all the necessary dependencies.
-
-```
-git clone https://github.com/vinothpandian/react-webpack4-boilerplate.git --depth=1 <your-app-folder>
-```
-
-### To install the necessary packages in `<your-app-folder>` folder, do
-
-```
-npm install
-```
-
-or if you use `yarn` then
-
-```
-yarn
-```
-
-### To run a development server
-
-```
-npm run start
-```
-
-or with `yarn`
-
-```
-yarn start
-```
-
-The developement server will run in http://localhost:8080/
-
-### To build the code use
-
-```
-npm run build
-```
-
-or with `yarn`
-
-```
-yarn build
-```
+Edit `vite.config.mjs` for build/test settings. Autoprefixer remains configured in `postcss.config.js`; Vite handles CSS minification. The unused PostCSS utilities, lodash, and obsolete Webpack/Babel plugins are removed from this starter.
